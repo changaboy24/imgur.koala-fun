@@ -3,7 +3,6 @@ window.ondrop = function(e) {e.preventDefault(); upload(e.dataTransfer.files[0])
 
 //http://api.imgur.com/examples#uploading_js
 function upload() {
->>>>>>> 9546b6c526dcbc2b58e509f6f1408ef34e8a2381
    // file is from a <input> tag or from Drag'n Drop
    // Is the file an image?
    if (!file || !file.type.match(/image.*/)) return;
