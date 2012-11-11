@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 window.ondragover = function(e) {e.preventDefault()}
 window.ondrop = function(e) {e.preventDefault(); upload(e.dataTransfer.files[0]); }
 
