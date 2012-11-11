@@ -7,8 +7,7 @@
 	</head>
 
 	<body>
-		<input id='choosefile' type="file"/>
-		<input id='button' type='button' value='upload' onclick="upload()"/>
+		<input type="file" onchange="upload(this.files[0])">
 	</body>
 
 </html>
