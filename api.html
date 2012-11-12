@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 
 	<head>
 		<title>Circles</title>
@@ -7,7 +7,23 @@
 	</head>
 
 	<body>
-		<input type="file" onchange="upload(this.files[0])">
+		<input id='choose' type="file" onchange="upload(this.files[0])">
 	</body>
 
+</html>
+ -->
+<html>
+<head>
+		<title>Circles</title>
+		<script src="api.js" type="text/javascript"></script>
+		<script src="jquery.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+ <div>DROP!<button onclick="document.querySelector('input').click()">Or click</button></div>
+<input style="visibility: collapse; width: 0px;" type="file" onchange="upload(this.files[0])">
+
+<p>Uploading...</p>
+<a id="link">It's online!!!</a>
+</body>
 </html>
