@@ -16,13 +16,21 @@
         var xhr = new XMLHttpRequest(); // Create the XHR (Cross-Domain XHR FTW!!!) Thank you sooooo much imgur.com
         xhr.open("POST", "http://api.imgur.com/2/upload.json"); // Boooom!
         xhr.onload = function() {
-
             //imgur API gives back imgur.com/3asds...
             //need to get specific jpg
             //need i.imgur/3asds.jpg (the i. and the .jpg at the end)
             var url = JSON.parse(xhr.responseText).upload.links.imgur_page;
             url = url.insert(7,"i.")+".jpg";
             var koala_url = "http://www.koalastothemax.com/?"+url;
+
+            var img = document.createElement("img");
+            img.src = url;
+            $('imgur').append(img);
+
+
+            var lnk = document.createElement("a");
+            lnk.href = koala_url;
+            $('koala').append(lnk);
         }
 
         xhr.send(fd);
