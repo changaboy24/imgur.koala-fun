@@ -25,12 +25,19 @@
 
             var img = document.createElement("img");
             img.src = url;
-            $('imgur').append(img);
+            //$('imgur').appendChild(img);
+            var imgur = document.getElementById('imgur');
+            imgur.appendChild(img);
 
 
             var lnk = document.createElement("a");
             lnk.href = koala_url;
-            $('koala').append(lnk);
+            lnk.innerHTML = 'koala';
+            var koala = document.getElementById('koala');
+            koala.appendChild(lnk);
+            //$('koala').appendChild(lnk);
+            console.log(lnk);
+            console.log(img);
         }
 
         xhr.send(fd);
