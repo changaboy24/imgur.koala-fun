@@ -19,6 +19,8 @@
             //imgur API gives back imgur.com/3asds...
             //need to get specific jpg
             //need i.imgur/3asds.jpg (the i. and the .jpg at the end)
+            $('#imgur').empty();
+            $('#koala').empty();
             var url = JSON.parse(xhr.responseText).upload.links.imgur_page;
             url = url.insert(7,"i.")+".jpg";
             var koala_url = "http://www.koalastothemax.com/?"+url;
